@@ -33,7 +33,7 @@ class SupplBizSpider(Spider):
         try:
             response = json.loads(grab.response.unicode_body())
             # To DO
-            supplier['id'] = getvalue(response.get('id'))
+            supplier['id'] = getvalue(str(response.get('id')))
             supplier['url'] = task.lang
             supplier['title'] = getvalue(response.get('title'))
             supplier['company_name'] = getvalue(response.get('company_name'))
