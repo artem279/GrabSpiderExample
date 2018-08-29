@@ -54,7 +54,7 @@ class SupplBizSpider(Spider):
         except:
             print('oops!')
 
-        if suppliers is not None:
+        if len(suppliers) > 0:
             data.extend(suppliers)
 
 
